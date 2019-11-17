@@ -1,0 +1,48 @@
+
+  
+
+   
+.conduct {
+  background-image: url("../../../assets/conducteur.png");
+  height: 80vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  margin:0px;
+}
+
+.conduct-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+
+@media only screen and (max-width: 900px) {
+  /* for medium device style tablet */
+  
+
+  .conduct {
+    height: 40vh;
+  }
+}
+
+
+@media only screen and (max-width: 576px) {
+  /* For mobile phones: */
+  .btn{
+      background-color:transparent;
+      font-size: 20px;
+      width: 100px;
+      border: none;
+      right: 20px;
+  }
+  .conduct {
+    height: 30vh;
+  }
+}
+

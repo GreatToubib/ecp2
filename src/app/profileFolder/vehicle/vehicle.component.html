@@ -1,0 +1,30 @@
+
+    <div class="form-group">
+
+        <!-- <label for="carMarque">Marque : {{ carMarque }}</label> -->
+        <input type="text" class="form-control" id="marque" aria-describedby="marque" [(ngModel)]="carMarque">
+
+        <!-- <label for="carModele">Modèle</label> -->
+        <input type="text" class="form-control" id="model" aria-describedby="model" [(ngModel)]="carModele">
+
+        <label for="carSieges">Nombre de sièges</label>
+        <select class="form-control" id="places" [(ngModel)]="carSieges">>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6</option>
+            <option>7</option>
+            <option>8</option>
+        </select>
+
+        <label>Volume approximatif du coffre en litres</label>
+        <input type="number" class="form-control" id="volume" aria-describedby="volume" [(ngModel)]="carVolume">
+
+        <button class="btn" (click)="modifierInfo()">
+            Modifier vos informations
+          </button>
+      
+    </div>
+ 

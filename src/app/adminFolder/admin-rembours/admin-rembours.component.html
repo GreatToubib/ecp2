@@ -1,0 +1,39 @@
+<app-navbar-admin></app-navbar-admin>
+
+<table class = "table col-12">
+  <thead>
+    <tr>
+      <th scope="col">Passager</th>
+      <th scope="col">Conducteur</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Aurélien</td>
+      <td>Thomas</td>
+      <td>
+        <div *ngIf="!trajetStatus"><p>&#10060;</p></div>
+        <div *ngIf="trajetStatus"><p>&#9989;</p></div>
+      </td>
+      <td>
+        <a routerLink="/messagerie" routerLinkActive="active"> <input type="button" value="Ouvrir la messagerie" /></a>
+        <ng-template #popContent>
+            <button class='btn btn-success' (click)='rembours()'>Confirmer </button>
+        </ng-template>
+        <button type="button" placement="right"
+        [ngbPopover]="popContent" popoverTitle="Attention, êtes-vous sûr de vouloir rembourser le passager?" [autoClose]="false">
+        Rembourser le passager
+        </button>
+        <ng-template #popContent>
+            <button class='btn btn-success' (click)='payer()'>Confirmer </button>
+        </ng-template>
+        <button type="button" placement="right"
+        [ngbPopover]="popContent" popoverTitle="Attention, êtes-vous sûr de vouloir payer le chauffeur?" [autoClose]="false">
+        Payer le chauffeur
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>

@@ -1,0 +1,11 @@
+
+<br>
+<div id="altContainer" class="list-group">
+<div class="list-grou-item">
+  <a href="#" class="list-group-item list-group-item-action active"> Alternatives disponibles</a>
+  <a *ngFor="let alt of alternative" href="#" class="list-group-item">{{alt.name}}
+    <br>
+    Distance : {{alt.distance}} km
+    <br></a>
+</div>
+</div>

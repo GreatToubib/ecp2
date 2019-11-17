@@ -1,0 +1,36 @@
+<app-navbar-admin></app-navbar-admin>
+
+<table class = "table col-12">
+  <thead>
+    <tr>
+      <th scope="col">Nom</th>
+      <th scope="col">Prénom</th>
+      <th scope="col">Photo</th>
+      <th scope="col">Nombre de réservation</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Thomas</td>
+      <td>Carlier</td>
+      <td>
+        <div class="container" style="width:80px">
+          <img src="assets\people.jpg" alt="photo" style="width: 100%">
+        </div>
+      </td>
+      <td>12</td>
+      <td>
+        <a routerLink="/profile" routerLinkActive="active"><input type="button" value="Voir le profil" /></a>
+        <a routerLink="/messagerie" routerLinkActive="active"><input type="button" value="Ouvrir une messagerie" /></a>
+        <ng-template #popContent>
+            <button class='btn btn-success' (click)='suspendre()'>Confirmer </button>
+        </ng-template>
+        <button type="button" placement="right"
+        [ngbPopover]="popContent" popoverTitle="Attention, êtes-vous sûr?" [autoClose]="false">
+        Suspendre
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
