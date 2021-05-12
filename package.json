@@ -23,7 +23,7 @@
     "@tomtom-international/web-sdk-maps": "^5.38.0",
     "angular": "^1.7.8",
     "bootstrap": "^4.3.1",
-    "chart.js": "^2.9.2",
+    "chart.js": "^2.9.4",
     "jquery": "^3.4.1",
     "ng2-charts": "^2.3.0",
     "popper.js": "^1.12.3",
